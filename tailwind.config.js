@@ -9,13 +9,16 @@ export default {
     theme: {
       extend: {
         colors: {
-            primary: '#e6a2a9',
-            second: '#f4d4dd',
-            third: '#D2B48C'
+            primary: '#f4d4dd',
+            second: '#e6a2a9',
+            third: '#6E4C3B'
         },
         fontFamily: {
           afacad: 'Afacad Flux, sans-serif',
           anton: 'Anton SC, sans-serif'
+        },
+        transitionTimingFunction: {
+          'custom-ease': 'cubic-bezier(0.5, 1.6, 0.4, 0.7)',
         },
       },
     },
@@ -38,10 +41,16 @@ export default {
             },
             '.input': {
               width: '90%',
-              height: '40px',
-              background: 'transparent',
+              height: '45px',
+              background: '#f4d4dd',
               border: '1px solid #000',
-              borderRadius: '5px'
+              
+            },
+            '.slide': {
+              width: '100%',
+              height: '100vh',
+              position: 'relative',
+              flexShrink: '0'
             },
           });
         }),
