@@ -10,8 +10,9 @@ export default {
       extend: {
         colors: {
             primary: '#f4d4dd',
-            second: '#e6a2a9',
-            third: '#6E4C3B'
+            second: '#f8c5c9',
+            third: '#e6a2a9',
+            fourth: '#8B4513'
         },
         fontFamily: {
           afacad: 'Afacad Flux, sans-serif',
@@ -42,9 +43,7 @@ export default {
             '.input': {
               width: '90%',
               height: '45px',
-              background: '#f4d4dd',
-              border: '1px solid #000',
-              
+              background: '#000000',
             },
             '.slide': {
               width: '100%',

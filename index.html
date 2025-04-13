@@ -8,58 +8,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Anton+SC&family=Audiowide&family=Cinzel:wght@400..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <title>JL | Donuts House</title>
 </head1
 <body class="font-afacad">
     <!--HEADER-->
-    <header class="w-full h-14 bg-primary fixed z-50 flex-box justify-around gap-72 p-5">
+    <header id="header" class="w-full h-14 bg-primary fixed z-50 flex-box justify-around gap-72 p-5 overflow-hidden">
         <div class="flex-box gap-5">
-            <img src="./src/assets/icons/Logo-Preta.png" class="size-12" alt="Logo">
+            <img src="./src/assets/icons/Logo-Preta.png" id="logo" class="size-12" alt="Logo">
             <h1 class="text-4xl text-black font-light">Donuts House</h1>
         </div>
 
         <nav class="w-2/4 flex-box justify-end">
             <ul class="full flex-box gap-5 text-xl font-light text-black">
-                <li><a href="#home" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-black before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in-out hover:before:w-full">Início</a></li>
-                <li><a href="#about" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-black before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in-out hover:before:w-full">Sobre</a></li>
-                <li><a href="#menu" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-black before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in-out hover:before:w-full">Cardápio</a></li>
-                <li><a href="#contact" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-black before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in-out hover:before:w-full">Contato</a></li>
+                <li><a href="#home" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in hover:before:w-full transition-all duration-300 hover:text-fourth">Início</a></li>
+                <li><a href="#about" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in hover:before:w-full transition-all duration-300 hover:text-fourth">Sobre</a></li>
+                <li><a href="#menu" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in hover:before:w-full transition-all duration-300 hover:text-fourth">Cardápio</a></li>
+                <li><a href="#contact" class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in hover:before:w-full transition-all duration-300 hover:text-fourth">Contato</a></li>
             </ul>
         </nav>
     </header>
     <!--CONTEÚDO PRINCIPAL-->
     <main class="w-full relative overflow-hidden">
         <!--BANNER SESSÃO INICIAL-->
-        <section id="home" class="w-full h-[90vh] relative flex-box">
+        <section id="home" class="w-full h-[95vh] relative flex-box">
 
             <section id="slider " class="relative w-full h-full overflow-hidden">
 
                 <div id="slides" class="w-full flex transition-all duration-500 ease-in-out">
 
                     <!--SLIDE 1-->
-                    <section class="slide bg-center bg-cover bg-no-repeat" style="background-image: url(./src/assets/imgs/banner-1.jpg);">
+                    <section class="slide bg-center bg-cover bg-no-repeat" style="background-image: url(./src/assets/imgs/banner-1.webp);">
                         <div class="w-[43%] absolute left-[5%] bottom-[25%]">
 
                             <article class="w-full flex-box flex-col items-start gap-10">
-                                <h2 class="text-white text-6xl font-medium tracking-[2px]">DELICIE-SE</h2>
-                                <p class="text-white text-xl text-justify">Sabores <span class="text-black">irresistíveis</span> feitos com ingredientes <span class="text-black">selecionados</span> e muito carinho. Doce para seu dia ou presente para <span class="text-black">alguém especial</span> — aqui você <span class="text-black">encontra</span> o sabor ideal para cada momento.</p>
+                                <h1 class="text-white text-6xl font-medium tracking-[2px]">DELICIE-SE</h1>
+                                <p class="text-white text-xl text-justify"><span class="text-second">Sabores irresistíveis</span> feitos com ingredientes <span class="text-second">selecionados</span> e muito carinho. Doce para seu dia ou presente para <span class="text-second">alguém especial</span> — aqui você <span class="text-second">encontra</span> o sabor ideal para cada momento.</p>
                                 <div class="w-full flex-box justify-start">
-                                    <a href="#about" class="w-2/4 h-12 bg-transparent border-[1px] border-primary flex-box text-white text-xl font-normal relative z-[2] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-y-0 before:transition-all before:duration-300 before:custom-ease hover:before:scale-[1] hover:text-black">CONHEÇA-NOS</a>
+                                    <a href="#about" class="w-2/4 h-12 bg-transparent border-[1px] border-primary flex-box text-white text-xl font-normal relative z-[2] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-x-0 before:transition-all before:duration-500 before:ease-custom-ease hover:before:scale-x-[1] hover:text-black">CONHEÇA-ME</a>
                                 </div>
                             </article>
                         </div>
                     </section>
                     <!--SLIDE 2-->
-                    <section class="slide bg-center bg-cover bg-no-repeat" style="background-image: url(./src/assets/imgs/banner-2.jpg);">
+                    <section class="slide bg-center bg-cover bg-no-repeat" style="background-image: url(./src/assets/imgs/banner-2.webp);">
                         <div class="w-[45%] absolute right-[5%] bottom-[30%]">
 
                             <article class="w-full flex-box flex-col items-end gap-10">
-                                <h2 class="text-white text-6xl font-medium tracking-[2px]">PEÇA O SEU</h2>
-                                <p class="text-white text-xl text-right">Não <span class="text-black">perca tempo</span> e <span class="text-black">faça</span>seu pedido.</p>
+                                <h1 class="text-white text-6xl font-medium tracking-[2px]">PEÇA O SEU</h1>
+                                <p class="text-white text-xl text-right">Não <span class="text-second">perca tempo</span> e faça já o seu pedido.</p>
                                 
                                 <div class="w-full flex-box justify-end">
-                                    <a href="https://api.whatsapp.com/send/?phone=5511939177836&text=Ol%C3%A1+Julia%21+Gostaria+de+fazer+meu+pedido+%EF%BF%BD&type=phone_number&app_absent=0"
-                                     class="w-2/4 h-12 bg-transparent border-[1px] border-primary flex-box text-white text-xl font-normal relative z-[2] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-y-0 before:transition-all before:duration-300 before:custom-ease hover:before:scale-[1] hover:text-black">FAZER PEDIDO</a>
+                                    <a href="https://api.whatsapp.com/send/?phone=5511939177836&text=Ol%C3%A1+Julia%21+Gostaria+de+fazer+meu+pedido+%EF%BF%BD&type=phone_number&app_absent=0" target="_blank"
+                                     class="w-2/4 h-12 bg-transparent border-[1px] border-primary flex-box text-white text-xl font-normal relative z-[2] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-x-0 before:transition-all before:duration-500 before:ease-custom-ease hover:before:scale-x-[1] hover:text-black">PEDIR JÁ</a>
                                 </div>
                             </article>
                         </div>
@@ -67,27 +68,29 @@
                 </div>
             </section>
             <div class="absolute bottom-8 flex-box gap-10">
-                <button id="prev" class="text-white text-2xl cursor-pointer place-content-center size-10 rounded-full border-white border-[1px] transition-all duration-300 hover:text-black hover:scale-[1.15]">&#10094;</button>
-                <button id="next" class="text-white text-2xl cursor-pointer place-content-center size-10 rounded-full border-white border-[1px] transition-all duration-300 hover:text-black hover:scale-[1.15]">&#10095;</button>
+                <button id="prev" class="text-white text-2xl cursor-pointer place-content-center size-10 rounded-full border-second border-[1px] transition-all duration-300 hover:text-second hover:scale-[1.15]">&#10094;</button>
+                <button id="next" class="text-white text-2xl cursor-pointer place-content-center size-10 rounded-full border-second border-[1px] transition-all duration-300 hover:text-second hover:scale-[1.15]">&#10095;</button>
             </div>
         </section>
         <!--SESSÃO SOBRE-->
-        <section id="about" class="sections bg-primary grid grid-cols-2 place-items-center">
+        <section id="about" class="sections bg-primary grid grid-cols-2 place-items-center bg-center bg-no-repeat bg-cover" style="background-image: url(./src/assets/imgs/Fundo-3.png);">
+            <!--<img src="./src/assets/imgs/Fundo-3.png" class="absolute drop-shadow-[0px_0px_5px_#dacec6]" alt="Fundo">-->
+
             <article class="col-start-1 w-[85%] h-2/4 relative z-10 flex-box flex-col items-start p-5 gap-5">
-                <h1 class="text-6xl text-black font-medium">SOBRE MIM</h1>
-                <hr class="w-16 border-t-4 border-black my-4">
+                <h1 class="text-6xl text-black font-medium">SOBRE <span class="text-fourth">MIM</span></h1>
+                <hr class="w-16 border-t-4 border-fourth my-4">
                 <p class="text-lg text-justify">
-                    Desde pequena, sempre fui <span class="text-fuchsia-500 font-medium">apaixonada</span> por doces. Aos <span class="text-fuchsia-500 font-medium">16 anos</span>, decidi transformar essa paixão em realidade e dar vida ao meu sonho de ter uma <span class="text-fuchsia-500 font-medium">loja própria</span>.
+                    Desde pequena, sempre fui <span class="text-fourth font-medium">apaixonada</span> por doces. Aos <span class="text-fourth font-medium">16 anos</span>, decidi transformar essa paixão em realidade e dar vida ao meu sonho de ter uma <span class="text-fourth font-medium">loja própria</span>.
                 </p>
                 <p class="text-lg text-justify">
-                    A <span class="text-fuchsia-500 font-medium">Donuts House</span> nasceu para oferecer donuts <span class="text-fuchsia-500 font-medium">artesanais</span> feitos com muito <span class="text-fuchsia-500 font-medium">carinho</span>. Mais do que vender doces, quero criar momentos especiais e proporcionar <span class="text-fuchsia-500 font-medium">experiências únicas</span> a cada mordida. Seja <span class="text-fuchsia-500 font-medium">bem-vindo!</span>
+                    A <span class="text-fourth font-medium">Donuts House</span> nasceu para oferecer donuts <span class="text-fourth font-medium">artesanais</span> feitos com muito <span class="text-fourth font-medium">carinho</span>. Mais do que vender doces, quero criar momentos especiais e proporcionar <span class="text-fourth font-medium">experiências únicas</span> a cada mordida. Seja <span class="text-fourth font-medium">bem-vindo!</span>
                 </p>
             </article>
 
             <div class="col-start-2 w-full h-full relative z-10 flex-box">
-                <img src="./src/assets/imgs/Foto-2.jpg" class="size-64 absolute top-1/5 right-1/5 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image">
-                <img src="./src/assets/imgs/Foto-1.jpg" class="size-72 absolute left-1/12 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image">
-                <img src="./src/assets/imgs/Foto-3.jpeg" class="size-56 w-2/4 absolute bottom-1/6 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image">
+                <img src="./src/assets/imgs/Foto-2.webp" class="size-64 absolute top-1/5 right-1/5 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image" loading="lazy">
+                <img src="./src/assets/imgs/Foto-1.webp" class="size-72 absolute left-1/12 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image" loading="lazy">
+                <img src="./src/assets/imgs/Foto-3.webp" class="size-56 w-2/4 absolute bottom-1/6 bg-black object-cover cursor-pointer transition-all duration-300 hover:scale-[1.1] hover:shadow-[1px_3px_6px_#000]" alt="Preview-Image" loading="lazy">
             </div>
         </section>
         <!--BANNER CARDÁPIO-->
@@ -106,64 +109,87 @@
             </article>
             <hr class="w-[1px] h-2/4 border-white bg-white z-10">
         </section>
-        <!--SESSÃO CARDÁPIO-->
-        <section class="sections bg-primary">
-            <!--<img src="./src/assets/imgs/figura-3.png" class="w-4/5 absolute bottom-[-0.3%] left-[-5%] scale-y-[1] scale-x-[-1] drop-shadow-[-5px_-5px_10px_#000]" alt="Figura">-->
-            <img src="./src/assets/imgs/figura-2.png" class="w-2/6 absolute z-20 top-0 right-[-1%] scale-y-[1] scale-x-[1] drop-shadow-[10px_10px_10px_#000]" alt="Figura">
-            <img src="./src/assets/imgs/1.png" class="absolute z-10 w-3/5 object-cover right-[7%] top-[-25%]" alt="Donut">
+        <!--SESSÃO CARDÁPIO 1-->
+        <section class="sections bg-primary bg-center bg-no-repeat bg-cover" style="background-image: url(./src/assets/imgs/Fundo-2.png);">
 
-            <article class="w-3/4 h-2/4 absolute left-[5%] bottom-[20%] flex-box flex-col items-start gap-12">
-                <h2 class="text-black text-[6rem] font-medium w-2/4 leading-24">DONUTS TRADICIONAIS</h2>
+            <div class="w-[90%] h-5/6 relative overflow-hidden">
 
-                <div class="flex-box gap-10 p-5">
-                    <ul class="text-black text-2xl font-light">
-                        <li class="sabor">- Prestígio</li>
-                        <li class="sabor">- Paçoca</li>
-                        <li class="sabor">- Beijinho</li>
-                        <li class="sabor">- brigadeiro</li>
-                    </ul>
+                <article class="w-3/4 h-full flex-box flex-col justify-between items-start">
+                    <h1 class="text-black text-[7rem] font-medium w-2/4 leading-28">DONU<span class="text-fourth">TS</span> <span class="text-fourth">TRA</span>DICIONAIS</h1>
+    
+                    <div class="flex flex-col gap-5">
+                        <h2 class="text-3xl text-text font-medium">Sabores:</h2>
 
-                    <ul class="text-black text-2xl font-light">
-                        <li class="sabor">- Chocolate preto</li>
-                        <li class="sabor">- Chocolate Branco</li>
-                        <li class="sabor">- Granulado</li>
-                        <li class="sabor">- M'M</li>
-                    </ul>
+                        <div class="flex gap-5">
+                            <ul class="text-text text-2xl font-light cursor-pointer">
+                                <li class="sabor hover:text-fourth">Prestígio</li>
+                                <li class="sabor hover:text-fourth">Paçoca</li>
+                                <li class="sabor hover:text-fourth">Beijinho</li>
+                                <li class="sabor hover:text-fourth">Brigadeiro</li>
+                            </ul>
+        
+                            <ul class="text-text text-2xl font-light cursor-pointer">
+                                <li class="sabor hover:text-fourth">Chocolate preto</li>
+                                <li class="sabor hover:text-fourth">Chocolate Branco</li>
+                                <li class="sabor hover:text-fourth">Granulado</li>
+                                <li class="sabor hover:text-fourth">M'M</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <img src="./src/assets/imgs/Donut-1.png" class="absolute top-0 right-0 size-[550px] object-cover overflow-hidden" alt="Image-Donut" loading="lazy">
+
+                <div class="text-black font-medium flex-box flex-col absolute bottom-0 right-0">
+                    <h3 class="text-3xl">PREÇO <span class="text-fourth">R$2,50</span></h3>
+                    <h4 class="text-2xl">(<span class="text-fourth">2</span> Unidades)</h4>
                 </div>
-            </article>
-            <div class="text-white text-3xl font-medium absolute bottom-[15%] right-[5%] z-10">
-                <h3>PREÇO R$2,50</h3>
-                <h3>(2 Unidades)</h3>
             </div>
+
         </section>
+        <!--DIVISOR CARDAPIO-->
+        <section class="w-full h-[40vh] flex-box gap-16 bg-top bg-cover bg-no-repeat relative z-10 before:contenr-[''] before:absolute before:w-full before:h-full before:bg-[#0000007a] before:left-0 before:top-0" style="background-image: url(./src/assets/imgs/banner-cardapio.webp);">
+            <hr class="w-1/5 h-[1px] bg-primary border-primary z-20">            
+            <img src="./src/assets/icons/Logo-Cor.png" class="size-28 z-20" alt="Logo">
+            <hr class="w-1/5 h-[1px] bg-primary border-primary z-20">
+        </section>
+        <!--SESSÃO CARDÁPIO 2-->
+        <section class="sections bg-primary bg-center bg-no-repeat bg-cover" style="background-image: url(./src/assets/imgs/Fundo-1.png);">
 
-        <section class="sections bg-primary">
-            <!--<img src="./src/assets/imgs/figura-3.png" class="w-4/5 absolute z-10 top-[-0.3%] left-[-5%] scale-y-[-1] scale-x-[-1] drop-shadow-[-5px_-5px_10px_#000]" alt="Figura">-->
-            <img src="./src/assets/imgs/figura-2.png" class="w-2/6 absolute z-20 bottom-0 right-[-1%] scale-y-[-1] scale-x-[1] drop-shadow-[10px_10px_10px_#000]" alt="Figura">
-            <img src="./src/assets/imgs/4.png" class="absolute z-10 w-3/6 object-cover right-[0%] top-[15%] rotate-[0deg]" alt="Donut">
+            <div class="w-[90%] h-5/6 relative overflow-hidden">
 
-            <article class="w-3/4 h-2/4 absolute z-20 left-[5%] bottom-[20%] flex-box flex-col items-start gap-12">
-                <h2 class="text-black text-[7rem] font-medium w-2/4 leading-24">DONUTS RECHEADOS</h2>
+                <article class="w-3/4 h-full flex-box flex-col justify-between items-start">
+                    <h1 class="text-black text-[7rem] font-medium w-2/4 leading-28">DONU<span class="text-fourth">TS</span> <span class="text-fourth">RE</span>CHEADOS</h1>
+    
+                    <div class="flex flex-col gap-5">
+                        <h2 class="text-3xl text-black font-medium">Sabores:</h2>
 
-                <div class="flex-box gap-10 p-5">
-                    <ul class="text-black text-2xl font-light">
-                        <li class="sabor">- Prestígio</li>
-                        <li class="sabor">- Paçoca</li>
-                        <li class="sabor">- Beijinho</li>
-                        <li class="sabor">- brigadeiro</li>
-                    </ul>
+                        <div class="flex gap-5">
+                            <ul class="text-black text-2xl font-light cursor-pointer">
+                                <li class="sabor hover:text-fourth">Prestígio</li>
+                                <li class="sabor hover:text-fourth">Paçoca</li>
+                                <li class="sabor hover:text-fourth">Beijinho</li>
+                                <li class="sabor hover:text-fourth">Brigadeiro</li>
+                            </ul>
+        
+                            <ul class="text-black text-2xl font-light cursor-pointer">
+                                <li class="sabor hover:text-fourth">Chocolate preto</li>
+                                <li class="sabor hover:text-fourth">Chocolate Branco</li>
+                                <li class="sabor hover:text-fourth">M'M</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
 
-                    <ul class="text-black text-2xl font-light">
-                        <li class="sabor">- Chocolate preto</li>
-                        <li class="sabor">- Chocolate Branco</li>
-                        <li class="sabor">- M'M</li>
-                    </ul>
+                <img src="./src/assets/imgs/Donut-2.png" class="absolute top-0 right-0 size-[650px] object-cover overflow-hidden" alt="Image-Donut" loading="lazy">
+
+                <div class="text-black font-medium flex-box flex-col absolute bottom-0 right-0">
+                    <h3 class="text-3xl">PREÇO <span class="text-fourth">R$4,50</span></h3>
+                    <h4 class="text-2xl">(<span class="text-fourth">2</span> Unidades)</h4>
                 </div>
-            </article>
-            <div class="text-white text-3xl font-medium absolute bottom-[15%] right-[5%] z-20">
-                <h3>PREÇO R$4,50</h3>
-                <h3>(2 Unidades)</h3>
+
             </div>
+
         </section>
         <!--BANNER CONTATO-->
         <section id="contact" class="w-full h-[50vh] flex-box justify-around gap-42 bg-center bg-cover bg-fixed bg-no-repeat relative z-10 before:contenr-[''] before:absolute before:w-full before:h-full before:bg-[#0000007a] before:left-0 before:top-0" style="background-image: url(./src/assets/imgs/banner-cardapio.webp);">
@@ -182,29 +208,44 @@
             <hr class="w-[1px] h-2/4 border-white bg-white z-10">
         </section>
         <!--SESSÃO CONTATO-->
-        <section id="contact" class="sections bg-primary grid grid-cols-2 place-items-center">
+        <section id="contact" class="sections bg-primary bg-center bg-no-repeat bg-cover" style="background-image: url(./src/assets/imgs/Fundo-3.png);">
             
+            <div class="w-full h-5/6 grid grid-cols-2 place-items-center relative">
 
-            <form action="" class="col-start-1 w-3/4 h-[90%] rounded-[10px] bg-black flex-box flex-col z-10 gap-3 p-5 shadow-[1px_1px_5px_#000]">
-                <h2 class="text-white text-3xl font-light">Deixar feedback</h2>
-                <input type="text" class="input outline-none p-5 text-black placeholder:text-black font-light cursor-pointer" placeholder="Nome" required>
-                <input type="email" class="input outline-none p-5 text-black placeholder:text-black font-light cursor-pointer" placeholder="Email" required>
-                <textarea placeholder="Mensagem" class="w-[90%] h-4/6 bg-primary resize-none outline-none p-5 text-black placeholder:text-black font-light cursor-pointer" required></textarea>
-                <button type="submit" class="w-[90%] h-12 bg-transparent cursor-pointer text-white text-xl relative z-[2] border-primary border-[1px] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-y-0 before:transition-all before:duration-300 hover:before:scale-[1] hover:text-black">ENVIAR</button>
-            </form>
-
-            <div class="col-start-2 w-4/5 h-3/4 z-10 flex-box items-start justify-end">
-                <div class="social">
-                    <a href="" class="flex-box justify-end gap-2 hover:text-fuchsia-500"><span>jldonutshouse</span><img src="./src/assets/icons/icon-instagram.png" class="size-8" alt="Icone-Social"></a>
-                    <a href="" class="flex-box justify-end gap-2 hover:text-fuchsia-500"><span>(11) 93917-7836</span><img src="./src/assets/icons/icon-whatsapp.png" class="size-8" alt="Icone-Social"></a>
+                <form action="" class="w-3/4 h-full col-start-1 bg-black flex-box flex-col gap-5">
+                    <div class="flex-box justify-start gap-5"><h3 class="text-primary text-3xl font-thin">Feedback</h3> <img src="./src/assets/icons/Logo-Cor.png" class="size-8" alt="Logo"></div>
+                    <input class="w-[90%] h-10 border-b-[1px] border-b-primary text-primary text-[1rem] font-light placeholder:text-primary placeholder:text-[1rem] placeholder:font-light outline-none p-2" type="text" placeholder="Nome" required>
+                    <input class="w-[90%] h-10 border-b-[1px] border-b-primary text-primary text-[1rem] font-light placeholder:text-primary placeholder:text-[1rem] placeholder:font-light outline-none p-2" type="email" placeholder="Email" required>
+                    <textarea class="w-[90%] h-2/4 border-b-[1px] border-b-primary text-xl text-primary text-[1rem] font-light placeholder:text-primary placeholder:text-[1rem] placeholder:font-light outline-none p-2 resize-none" placeholder="Mensagem" required></textarea>
+                    <button class="w-[90%] h-10 cursor-pointer border-[1px] border-primary text-primary relative z-[2] before:content-[''] before:absolute before:z-[-1] before:w-full before:h-full before:bg-primary before:left-0 before:top-0 before:scale-x-0 before:transition-all before:duration-500 before:ease-custom-ease hover:before:scale-x-[1] hover:text-black" type="submit">ENVIAR</button>
+                </form>
+    
+                <div class="col-start-2 w-4/5 h-3/4 z-10 flex-box items-start justify-end">
+                    <div class="social">
+                        <a href="https://www.instagram.com/jldonutshouse/" target="_blank" class="group flex-box justify-end gap-2 hover:text-fourth"><span class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in group-hover:before:w-full">jldonutshouse</span><img src="./src/assets/icons/icon-instagram.png" class="size-8" alt="Icone-Social"></a>
+                        <a href="https://api.whatsapp.com/send/?phone=5511939177836&text=Ol%C3%A1+Julia%21+Gostaria+de+fazer+meu+pedido+%EF%BF%BD&type=phone_number&app_absent=0" target="_blank" class="group flex-box justify-end gap-2 hover:text-fourth"><span class="relative before:content-[''] before:absolute before:w-0 before:h-[1px] before:bg-fourth before:transition-all before:bottom-0 before:left-0 before:duration-200 before:ease-in group-hover:before:w-full">(11) 93917-7836</span><img src="./src/assets/icons/icon-whatsapp.png" class="size-8" alt="Icone-Social"></a>
+                    </div>
                 </div>
             </div>
+
         </section>
     </main>
     <!--FOOTER-->
-    <footer class="w-full h-16 flex-box bg-primary border-t-[1px] border-t-black">
-        <h3 class="text-xl text-black font-light">©2025-TodosOsDireitosReservados</h3>
+    <footer class="w-full h-32 flex-box flex-col bg-primary border-t-[4px] border-t-second">
+        <!--FOOTER LOJA-->
+        <section class="w-full h-16 flex-box"><h3 class="text-[1rem] text-black font-light">©2025-TodosOsDireitosReservados</h3></section>
+        <hr class="w-1/4 bg-black border-second">
+        <!--FOOTER DESENVOLVEDOR-->
+        <section class="w-full h-16 flex-box gap-2">
+            <h3>Por: Luiz A. Farias</h3>
+            <div class="flex-box gap-[1px]">
+                <a href="https://www.linkedin.com/in/luiz-henrique-araujo-farias-95050731b/" target="_blank" class="transition-all duration-200 hover:mb-2"><img src="./src/assets/icons/icon-linkedin.png" class="size-5" alt="Rede-Desenvolvedor"></a>
+                <a href="https://github.com/luizaraujo-faria" target="_blank" class="transition-all duration-200 hover:mb-2"><img src="./src/assets/icons/icon-github.png" class="size-5" alt="Rede-Desenvolvedor"></a>
+                <a href="https://www.instagram.com/luizaraujo_farias/" target="_blank" class="transition-all duration-200 hover:mb-2"><img src="./src/assets/icons/icon-instagram.png" class="size-5" alt="Rede-Desenvolvedor"></a>
+            </div>
+        </section>
     </footer>
 </body>
 <script src="./src/js/index.js"></script>
+<script src="./src/js/animate.js"></script>
 </html>
